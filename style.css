@@ -1,0 +1,330 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-color:white;
+    --second-color:black;
+}
+/*start header*/
+header .container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    
+}
+header{
+    position: fixed;
+    width: 100%;
+    color: var(--second-color);
+    z-index: 999;
+    background-color:rgb(131, 100, 63);
+    padding: 20px;
+
+}
+
+header .container ul{
+    display: flex;
+    text-align: center;
+    list-style-type: none;
+}
+header .container ul li{
+    position: relative;
+}
+header .container ul li a {
+    text-decoration: none;
+    padding: 20px;
+    color:var(--second-color);
+    font-size: 20px;
+    margin: 10px;
+}
+
+header .container ul li a:hover{
+    border-bottom: 2px solid;
+ 
+}
+header .container .active{
+    border-bottom: 2px solid;
+} 
+
+
+header .container #toggle ,label{
+    display: none;
+}
+@media(max-width:771px){
+    header .container label{
+        display: block;
+    
+    }
+    header .container #toggle:checked ~ nav{
+        display: block;
+       
+    }
+    header .container nav{
+        display: none;
+        width: 100%;
+    }
+    header .container ul{
+        flex-direction:column;
+       gap: 40px;
+       
+      
+    
+    }
+  
+}
+/*end header*/
+
+
+/*start home page*/
+section .content{
+    background-image: url(images/hot-espresso-coffee-cup-with-newspaper-wooden-table-lighting-bokeh-blur-background_49071-680.jpg);
+    width: 100%;
+    background-position:center;
+    height: 100vh;
+    background-size: cover;
+
+
+}
+section .content .details{
+position:absolute;
+top: 50%;
+left: 50%;
+text-align: center;
+transform: translate(-50%,-50%);
+}
+section .content .details p{
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-top: 100px;
+}
+section .content .details h1{
+    font-size: 70px;
+    font-weight: 800;
+    color: var(--main-color);
+    margin: 30px;
+}
+section .content .details button{
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(94, 82, 66);
+    color: var(--main-color);
+}
+section .content .details button:hover{
+    background-color: rgb(109, 103, 95);
+    color: var(--main-color);
+}
+
+/*end home page*/
+/* start story section*/
+
+section .story-det{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    overflow:hidden
+}
+section .story-det img{
+    width: 40%;
+    height: 50vh;
+
+}
+section .story-det .text{
+    width: 50%;
+}
+
+
+section .story-det .text h2{
+    font-size: 20px;
+    letter-spacing: 10px;
+}
+section .story-det .text h1{
+    margin: 20px;
+    font-size: 40px;
+}
+section .story-det .text p{
+    margin: 20px;
+    font-size: 25px;
+}
+section .story-det .text button{
+    border: none;
+    color: var(--second-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color:var(--main-color);
+}
+
+/*end story section*/
+
+/*start gallery*/
+hr{
+    margin-top: 20px;
+}
+section #title{
+    border: 2px solid black;
+    text-align: center;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 14px;
+    margin: 10px auto;
+    position: relative;
+    z-index:22;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+section #title::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgb(146, 133, 104);
+    height: 100%;
+    z-index: -11;
+}
+section #title:hover::after{
+    width: 100%;
+    transition: 0.5s;
+   
+}
+
+section .gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+
+}
+section .gallery img{
+    width: 100%;
+    
+}
+section .gallery .cards{
+    border: 2px solid black;
+    position: relative;
+} 
+section .gallery .cards .card-det{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+
+}
+section .gallery .cards:hover .card-det{
+    opacity: 1;
+    background-color:rgba(240, 255, 255, 0.144);
+    color: var(--second-color);
+    transition: 0.5s;
+    text-align: center;
+    font-size: 25px;
+}
+/*end gallery*/
+/* start descrpation section*/
+
+section .txt-des{
+    background-image: url(images/cup-coffee-with-roasted-coffee-beans_23-2150698823.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 50px;
+    position: relative;
+   
+}
+
+section .txt-des .text1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+    
+}
+section .txt-des .text1 h3{
+    color: var(--main-color);
+    
+
+}
+section .txt-des .text1 h1{
+    margin-top: 20px;
+    color: var(--main-color);
+   
+}
+section .txt-des .text1 p{
+    margin-top: 20px;
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+/*end descripation section*/
+
+footer{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 40px;
+    
+}
+footer .container ul{
+    display: flex;
+    list-style-type: none;
+    margin: auto;
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+footer .container ul li {
+    margin: 10px;
+    font-size: 20px
+
+}
+hr{
+    margin-top: 40PX;
+}
+footer .container .contact span{
+   margin: 30px;
+   gap: 10px;
+   font-size: 20px;
+   display: flex;
+   text-align: center;
+   justify-content: center;
+}
+footer p{
+    font-size: 20px;
+}
+@media(max-width:776px){
+    footer .container{
+        flex-wrap: wrap;
+    }
+}
+@media(max-width:344px){
+    section .txt-des .text1 h3{
+        color: var(--main-color);
+        
+    
+    }
+    section .txt-des .text1 h1{
+        margin-top: 100px;
+        color: var(--main-color);
+       
+    }
+}
+
+   
+
